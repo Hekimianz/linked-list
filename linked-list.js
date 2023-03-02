@@ -22,6 +22,7 @@ const LinkedList = () => {
       pointer.nextNode = newNode;
     }
     size += 1;
+    return newNode;
   };
 
   const prepend = (value) => {
@@ -33,6 +34,7 @@ const LinkedList = () => {
       head = newNode;
     }
     size += 1;
+    return newNode;
   };
 
   const tail = (pointer = head) => {
@@ -120,6 +122,7 @@ const LinkedList = () => {
     const beforeNode = pointer;
     beforeNode.nextNode = newNode;
     size += 1;
+    return newNode;
   };
 
   const removeAt = (
@@ -164,3 +167,9 @@ const LinkedList = () => {
 };
 
 const list = LinkedList();
+console.log(list.append(1));
+console.log(list.append(2));
+console.log(list.append(3));
+console.log(list.prepend(0));
+console.log(list.tail());
+console.log(list.toString());
